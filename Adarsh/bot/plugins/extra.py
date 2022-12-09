@@ -17,12 +17,12 @@ async def maintainers(b,m):
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="I am Made By [SANDY⚡](https://t.me/syrus_143_hpy)",
+                    text="I am Made By [亗 𝗧𝗛𝗘 𝗦𝗔𝗡𝗗𝗠𝗔𝗡 ⚡](https://t.me/syrus_143_hpy)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Owner💻", url=f"https://t.me/syrus_143_hpy")
+                                InlineKeyboardButton("My Love/Owner☺", url=f"https://t.me/syrus_143_hpy")
                             ]
                         ]
                     ),
@@ -30,7 +30,7 @@ async def maintainers(b,m):
                     disable_web_page_preview=True)
             
          
-@StreamBot.on_message(filters.regex("Subscribe ❤️"))
+@StreamBot.on_message(filters.regex("Join ❤️"))
 async def follow_user(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
@@ -42,13 +42,13 @@ async def follow_user(b,m):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Subscribe ❤️", url=f"https://t.me/syrus_143_hpy")
+                                InlineKeyboardButton("Join ❤️", url=f"https://t.me/Filmy_Men")
                             ]
                         ]
                     ),
                     
                     disable_web_page_preview=True)
-        
+         
 
 @StreamBot.on_message(filters.regex("DC"))
 async def start(bot, update):
@@ -63,7 +63,7 @@ async def start(bot, update):
     
 @StreamBot.on_message(filters.command("list"))
 async def list(l, m):
-    LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`Subscribe ❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
+    LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`Join ❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
     await l.send_message(chat_id = m.chat.id,
         text = LIST_MSG.format(m.from_user.mention(style="md"))
         
@@ -76,7 +76,7 @@ async def ping(b, m):
     ag = await m.reply_text("....")
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
-    await ag.edit(f"Pong!\n{time_taken_s:.3f} ms")
+    await ag.edit(f"Ping!\n{time_taken_s:.3f} ms")
     
     
     
